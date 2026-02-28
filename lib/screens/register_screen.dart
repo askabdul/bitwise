@@ -244,7 +244,7 @@ class RegisterScreen extends StatelessWidget {
                       text: TextSpan(
                           style: const TextStyle(color: Colors.black, fontSize: 12),
                           children: [
-                            const TextSpan(text: "By continuing you agree to our "),
+                            const TextSpan(text: "By continuing, you agree to our "),
                             TextSpan(
                               text: "Terms of Use ",
                               style: const TextStyle(
@@ -257,7 +257,7 @@ class RegisterScreen extends StatelessWidget {
                             ),
                             const TextSpan(text: "and "),
                             TextSpan(
-                              text: "Privacy Policy ",
+                              text: "Privacy Policy.",
                               style: const TextStyle(
                                 color: Colors.black, fontWeight: FontWeight.bold,
                               ),
