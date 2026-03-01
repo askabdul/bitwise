@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/theme/app_colors.dart';
 import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -26,18 +27,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        backgroundColor: Color(0xFF00D09E),
+    return Scaffold(
+        backgroundColor: AppColors.primary,
         body: SafeArea(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.ac_unit_sharp,
-                  size: 150,
-                ),
-                Text(
+                Image.asset('assets/images/logo-dark.png', width: 140, height: 140,),
+                const Text(
                   "FinWise",
                   style: TextStyle(
                       fontSize: 40,

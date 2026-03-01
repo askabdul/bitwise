@@ -17,11 +17,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final List<Map<String, String>> _pages = [
     {
       'title': 'Welcome to Expense Manager',
-      'img': 'assets/images/gear.png',
+      'img': 'assets/images/toss.png',
     },
     {
-      'title': 'Are you ready to take care of your finances?',
-      'img': 'assets/images/password-reset-congrats.png',
+      'title': '¿Are you ready to take control of your finances?',
+      'img': 'assets/images/bank-card.png',
     },
   ];
 

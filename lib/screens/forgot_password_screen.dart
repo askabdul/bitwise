@@ -134,16 +134,19 @@ class ForgotPasswordScreen extends StatelessWidget {
                   'or Sign up with',
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
-                const SizedBox(height: 8),
-                const Row(
+                const SizedBox(height: 20),
+                Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.facebook_outlined,
-                          color: Colors.grey, size: 30),
+                      Image.asset('assets/images/facebook.png', width: 30, height: 30,),
+
                       SizedBox(width: 10),
-                      Icon(Icons.email, color: Colors.grey, size: 30),
-                    ]),
-                const SizedBox(height: 12),
+
+                      Image.asset('assets/images/google.png', width: 30, height: 30,),
+
+                    ]
+                ),
+                const SizedBox(height: 20),
                 RichText(
                   text: TextSpan(
                       style: const TextStyle(color: Colors.black, fontSize: 12),

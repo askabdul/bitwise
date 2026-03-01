@@ -14,11 +14,8 @@ class AuthOptionScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(
-                Icons.ac_unit_sharp,
-                size: 150,
-                color: Color(0xFF00D09E),
-              ),
+              Image.asset('assets/images/logo-green.png', width: 140, height: 140,),
+
               const Text(
                 "FinWise",
                 style: TextStyle(

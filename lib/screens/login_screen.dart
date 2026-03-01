@@ -60,16 +60,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: "example@example.com",
-                    filled: true,
-                    fillColor: const Color(0xFFDFF7E2),
-                    contentPadding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30),
-                      borderSide: BorderSide.none,
+                SizedBox(
+                  height: 40,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "example@example.com",
+                      filled: true,
+                      fillColor: const Color(0xFFDFF7E2),
+                      contentPadding:
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: BorderSide.none,
+                      ),
                     ),
                   ),
                 ),
@@ -90,25 +93,30 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: "Enter your password",
-                      filled: true,
-                      fillColor: const Color(0xFFDFF7E2),
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 5),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
-                        borderSide: BorderSide.none,
-                      ),
+                SizedBox(
+                  height: 40,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: "Enter your password",
+                        filled: true,
+                        fillColor: const Color(0xFFDFF7E2),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 5),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide.none,
+                        ),
                       suffixIcon: IconButton(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.remove_red_eye_outlined,
-                          color: Colors.grey,
+                        icon: Image.asset(
+                          'assets/images/eye.png',
+                          width: 25,
+                          height: 25,
                         ),
-                      )),
+                      ),
+                    ),
+                  ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                 ElevatedButton(
@@ -157,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 20),
 
                 RichText(
                   text: TextSpan(
@@ -185,18 +193,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   style:
                   TextStyle(fontSize: 10, color: Colors.grey),
             ),
-                const SizedBox(height: 8),
-                const Row(
+                const SizedBox(height: 25),
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.facebook_outlined, color: Colors.grey, size: 30),
+                    Image.asset('assets/images/facebook.png', width: 30, height: 30,),
+
                     SizedBox(width: 10),
 
-                    Icon(Icons.email, color: Colors.grey, size: 30),
+                    Image.asset('assets/images/google.png', width: 30, height: 30,),
+
                   ]
                 ),
 
-                const SizedBox(height: 12),
+                const SizedBox(height: 25),
 
                 RichText(
                   text: TextSpan(
