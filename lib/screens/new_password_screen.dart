@@ -1,3 +1,4 @@
+import 'package:bitwise/screens/new_password_success.dart';
 import 'package:flutter/material.dart';
 
 class NewPasswordScreen extends StatelessWidget {
@@ -116,11 +117,11 @@ class NewPasswordScreen extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //       builder: (context) => const HomeScreen(),
-                          //     ));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const NewPasswordSuccess(),
+                              ));
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF00D09E),
