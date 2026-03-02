@@ -3,6 +3,7 @@ import 'package:bitwise/screens/register_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import 'bottom_nav_screens/bottom_nav.dart';
 import 'forgot_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -124,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) =>  BottomNav(),
                         ));
                   },
                   style: ElevatedButton.styleFrom(
@@ -183,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             // trigger biometric auth
                           },
                       ),
-                      TextSpan(text: " To access"),
+                      const TextSpan(text: " To access"),
                     ],
                   ),
                 ),
@@ -199,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Image.asset('assets/images/facebook.png', width: 30, height: 30,),
 
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
 
                     Image.asset('assets/images/google.png', width: 30, height: 30,),
 

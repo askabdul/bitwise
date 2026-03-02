@@ -140,7 +140,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                     children: [
                       Image.asset('assets/images/facebook.png', width: 30, height: 30,),
 
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
 
                       Image.asset('assets/images/google.png', width: 30, height: 30,),
 
