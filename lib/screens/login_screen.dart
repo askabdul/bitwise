@@ -1,4 +1,4 @@
-import 'package:bitwise/screens/home_screen.dart';
+import 'package:bitwise/screens/bottom_nav_screens/home_screen.dart';
 import 'package:bitwise/screens/register_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

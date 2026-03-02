@@ -5,20 +5,19 @@ import 'package:bitwise/screens/bottom_nav_screens/transaction_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../custom_widgets/custom_nav.dart';
-import '../home_screen.dart';
+import 'home_screen.dart';
 
 class BottomNav extends StatefulWidget {
-  BottomNav({super.key});
+  const BottomNav({super.key});
 
   @override
   State<BottomNav> createState() => _BottomNavState();
 }
 
 class _BottomNavState extends State<BottomNav> {
-  // final PersistentTabController _controller =
   int _selectedIndex = 0;
   final List<Widget> _screens = [
-    HomeScreen(),
+    const HomeScreen(),
     const AnalysisScreen(),
     const TransactionScreen(),
     const CategoryScreen(),

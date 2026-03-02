@@ -23,7 +23,7 @@ class CustomBottomNav extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.menuBg,
         borderRadius: BorderRadius.circular(50),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 8,
