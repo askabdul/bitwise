@@ -1,4 +1,3 @@
-import 'package:bitwise/screens/bottom_nav_screens/home_screen.dart';
 import 'package:bitwise/screens/register_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -125,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>  BottomNav(),
+                          builder: (context) =>  const BottomNav(),
                         ));
                   },
                   style: ElevatedButton.styleFrom(
