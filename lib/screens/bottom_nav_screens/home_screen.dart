@@ -1,7 +1,10 @@
+import 'package:bitwise/screens/duration_screens/daily_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../../custom_widgets/progress_pill.dart';
+import '../duration_screens/monthly_screen.dart';
+import '../duration_screens/weekly_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -163,11 +166,11 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 35,
+                  height: 20,
                 ),
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.all(20.0),
                     decoration: const BoxDecoration(
                       color: AppColors.secondary,
                       borderRadius: BorderRadius.only(
@@ -283,38 +286,45 @@ class HomeScreen extends StatelessWidget {
                                           height: 20,
                                         ),
                                       ),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Image.asset(
-                                            'assets/images/food.png',
-                                            width: 30,
-                                            height: 30,
-                                          ),
-                                          const SizedBox(
-                                            width: 5,
-                                          ),
-                                          const Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                'Food Last Week',
-                                                style: TextStyle(
-                                                    fontSize: 12,
-                                                    color: AppColors.textColor),
-                                              ),
-                                              Text(
-                                                '-\$100.00',
-                                                style: TextStyle(
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: AppColors.tertiary),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
+                                      Container(
+                                        margin:
+                                            const EdgeInsets.only(right: 25),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Image.asset(
+                                              'assets/images/food.png',
+                                              width: 30,
+                                              height: 30,
+                                            ),
+                                            const SizedBox(
+                                              width: 5,
+                                            ),
+                                            const Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  'Food Last Week',
+                                                  style: TextStyle(
+                                                      fontSize: 12,
+                                                      color:
+                                                          AppColors.textColor),
+                                                ),
+                                                Text(
+                                                  '-\$100.00',
+                                                  style: TextStyle(
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color:
+                                                          AppColors.tertiary),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
                                       )
                                     ],
                                   ),
@@ -324,39 +334,58 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 15,
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: AppColors.menuBg,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          child: TabBar(
-                            indicator: BoxDecoration(
-                              color: AppColors.primary,
-                              borderRadius: BorderRadius.circular(50),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: AppColors.menuBg,
+                                borderRadius: BorderRadius.circular(50),
+                              ),
+                              child: TabBar(
+                                indicator: BoxDecoration(
+                                  color: AppColors.primary,
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+
+                                indicatorSize:
+                                    TabBarIndicatorSize.tab, // important
+                                indicatorPadding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 6,
+                                ),
+
+                                labelColor: AppColors.textColor,
+                                unselectedLabelColor:
+                                    AppColors.textColor.withOpacity(0.6),
+
+                                labelPadding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+
+                                dividerColor:
+                                    Colors.transparent, // removes bottom line
+
+                                tabs: const [
+                                  Tab(text: 'Daily'),
+                                  Tab(text: 'Weekly'),
+                                  Tab(text: 'Monthly'),
+                                ],
+                              ),
                             ),
-
-                            indicatorSize: TabBarIndicatorSize.tab, // important
-                            indicatorPadding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                              vertical: 6,
+                            const SizedBox(
+                              height: 220,
+                              child: TabBarView(
+                                children: [
+                                  SingleChildScrollView(child: DailyScreen()),
+                                  SingleChildScrollView(child: WeeklyScreen()),
+                                  SingleChildScrollView(child: MonthlyScreen()),
+                                ],
+                              ),
                             ),
-
-                            labelColor: AppColors.textColor,
-                            unselectedLabelColor: AppColors.textColor.withOpacity(0.6),
-
-                            labelPadding: const EdgeInsets.symmetric(horizontal: 16),
-
-                            dividerColor: Colors.transparent, // removes bottom line
-
-                            tabs: const [
-                              Tab(text: 'Daily'),
-                              Tab(text: 'Weekly'),
-                              Tab(text: 'Monthly'),
-                            ],
-                          ),
-                        )
+                          ],
+                        ),
                       ],
                     ),
                   ),
