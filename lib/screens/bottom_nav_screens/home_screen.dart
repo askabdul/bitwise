@@ -5,6 +5,7 @@ import '../../core/theme/app_colors.dart';
 import '../../custom_widgets/progress_pill.dart';
 import '../duration_screens/monthly_screen.dart';
 import '../duration_screens/weekly_screen.dart';
+import '../notification_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,13 +20,13 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: AppColors.primary,
           automaticallyImplyLeading: false,
           elevation: 0,
-          flexibleSpace: const SafeArea(
+          flexibleSpace: SafeArea(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -39,14 +40,23 @@ class HomeScreen extends StatelessWidget {
                               fontSize: 10, color: AppColors.textColor)),
                     ],
                   ),
-                  CircleAvatar(
-                    radius: 16,
-                    backgroundColor: AppColors.secondary,
-                    child: Icon(
-                      Icons.notifications_none_sharp,
-                      size: 26,
-                      color: AppColors.iconColor,
-                      weight: 100.0,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NotificationScreen(),
+                          ));
+                    },
+                    child: const CircleAvatar(
+                      radius: 16,
+                      backgroundColor: AppColors.secondary,
+                      child: Icon(
+                        Icons.notifications_none_sharp,
+                        size: 26,
+                        color: AppColors.iconColor,
+                        weight: 100.0,
+                      ),
                     ),
                   ),
                 ],

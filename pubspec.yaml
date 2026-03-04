@@ -80,6 +80,9 @@ flutter:
          - asset: assets/fonts/Poppins-ExtraBold.ttf
            weight: 700
            style: italic
+         - asset: assets/fonts/Poppins-Medium.ttf
+           weight: 300
+
 
 
   #   - family: Trajan Pro
