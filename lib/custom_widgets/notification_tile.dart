@@ -54,7 +54,9 @@ class NotificationTile extends StatelessWidget {
                     Text(
                       notification.description!,
                       style: const TextStyle(
-                          fontSize: 10, fontWeight: FontWeight.w400, color: AppColors.textColor),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.textColor),
                       softWrap: true,
                     ),
                     const SizedBox(
@@ -66,6 +68,7 @@ class NotificationTile extends StatelessWidget {
                         style: const TextStyle(
                           fontSize: 11,
                           color: AppColors.tertiary,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
                     const SizedBox(
